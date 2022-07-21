@@ -1,0 +1,94 @@
+.animated-grid {
+    height: 80vh;
+
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+  
+    grid-template-areas:
+      'a  b    c'
+      'd  m    e'
+      'f  g    h';
+  
+    grid-template-rows: repeat(3, 30%);
+    grid-template-columns: repeat(3, 24%, 3);
+
+    --stagger-delay: 100ms;
+}
+
+@keyframes cardEntrance {
+    
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+        filter: hue-rotate(90deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: hue-rotate(0deg);
+    }
+    
+}
+
+.card {
+    animation: cardEntrance 500ms ease-out;
+    animation-fill-mode: backwards;
+    width: fit-content;
+    height: fit-content;
+}
+
+.card:nth-child(1) {
+    grid-area: a;
+    animation-delay: calc(2 * var(--stagger-delay));
+    --cardColor: #FFD800;
+}
+
+.card:nth-child(2) {
+    grid-area: b;
+    animation-delay: calc(4 * var(--stagger-delay));
+    --cardColor: #4CFF00;
+}
+
+.card:nth-child(3) {
+    grid-area: c;
+    animation-delay: calc(2 * var(--stagger-delay));
+    --cardColor: #00FF90;
+}
+
+.card:nth-child(4) {
+    grid-area: d;
+    animation-delay: calc(4 * var(--stagger-delay));
+    --cardColor: #0094FF;
+}
+
+.card:nth-child(5) {
+    grid-area: m;
+    animation-delay: calc(4 * var(--stagger-delay));
+    --cardColor: #FF6A00;
+}
+
+.card:nth-child(6) {
+    grid-area: e;
+    animation-delay: calc(2 * var(--stagger-delay));
+    --cardColor: #B6FF00;
+}
+
+.card:nth-child(7) {
+    grid-area: f;
+    animation-delay: calc(4 * var(--stagger-delay));
+    --cardColor: #00FF21;
+}
+
+.card:nth-child(8) {
+    grid-area: g;
+    animation-delay: calc(2 * var(--stagger-delay));
+    --cardColor: #00FFFF;
+}
+
+
+.card:nth-child(9) {
+    grid-area: h;
+    animation-delay: calc(8 * var(--stagger-delay));
+    --cardColor: #FF0000;
+}

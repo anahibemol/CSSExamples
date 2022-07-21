@@ -1,0 +1,56 @@
+body {
+    background: #1F2024;
+    font-family: 'Noto sans', sans-serif;
+    color: #fff;
+    overflow: hidden;
+    justify-content: ce;
+}
+
+body, html {
+    height: 100%;
+}
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1px;
+    background-position-y: top;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    color: #fff;
+
+    box-shadow: 4px 6px #000000;
+
+    height: 100%;
+    width: 100%;
+
+    border-radius: 4px;
+
+    transition: all 500ms;
+
+    overflow: hidden;
+
+    background-color: #404040;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+.card:hover {
+    transform: translateY(-3px) scale(1.05);
+    filter:drop-shadow(.1rem .1rem .5rem var(--cardColor))
+
+}
